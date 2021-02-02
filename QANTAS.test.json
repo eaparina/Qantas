@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "2a7b653c-10f2-485b-934d-b74660cd0742",
+		"name": "QANTAS test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Weather forecast Sydney",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b17b18c-60cf-438e-8c6b-cc67d06fbe40",
+						"exec": [
+							"/*json_response = JSON.parse(responseBody)",
+							"x = json_response.data[0].city_name;",
+							"y = json_response.data[0].weather.description;",
+							"pm.expect(x).to.equal(\"Sydney\");",
+							"pm.expect(y).to.equal(\"Clear sky\");*/",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dde3870a-9240-4256-b189-46054cdb63b1",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?lat=-33.865143&lon=151.209900&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "-33.865143"
+						},
+						{
+							"key": "lon",
+							"value": "151.209900"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Weather forecast 0&0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b17b18c-60cf-438e-8c6b-cc67d06fbe40",
+						"exec": [
+							"json_response = JSON.parse(responseBody)",
+							"x = json_response.data[0].city_name;",
+							"//y = json_response.data[0].weather.description;",
+							"pm.expect(x).to.equal(null);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?lat=0&lon=0&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "0"
+						},
+						{
+							"key": "lon",
+							"value": "0"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Weather forecast Min L&L",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b17b18c-60cf-438e-8c6b-cc67d06fbe40",
+						"exec": [
+							"json_response = JSON.parse(responseBody)",
+							"x = json_response.data[0].city_name;",
+							"//y = json_response.data[0].weather.description;",
+							"pm.expect(x).to.equal(null);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?lat=-90&lon=-180&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "-90"
+						},
+						{
+							"key": "lon",
+							"value": "-180"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Weather forecast Max L&L",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b17b18c-60cf-438e-8c6b-cc67d06fbe40",
+						"exec": [
+							"json_response = JSON.parse(responseBody)",
+							"x = json_response.data[0].city_name;",
+							"//y = json_response.data[0].weather.description;",
+							"pm.expect(x).to.equal(null);",
+							"",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?lat=90&lon=180&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "90"
+						},
+						{
+							"key": "lon",
+							"value": "180"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Weather forecast Invalid L&L",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b17b18c-60cf-438e-8c6b-cc67d06fbe40",
+						"exec": [
+							"json_response = JSON.parse(responseBody)",
+							"x = json_response.data[0].city_name;",
+							"//y = json_response.data[0].weather.description;",
+							"pm.expect(x).to.equal(null);",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?lat=-390&lon=345&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "-390"
+						},
+						{
+							"key": "lon",
+							"value": "345"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather forecast post code 4 digits",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b82b323-2667-49de-9a19-da80be5ea625",
+						"exec": [
+							"json_response = JSON.parse(responseBody)",
+							"x = json_response.data[0].city_name;",
+							"y = json_response.data[0].weather.description;",
+							"z = json_response.data[0].weather.code;",
+							"w = json_response.data[0].weather.icon;",
+							"pm.expect(x).to.equal(\"Mona Vale\");",
+							"console.log(json_response.data[0].weather.description);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "453be92e-fd77-4274-9b65-908e3b6b4eb9",
+						"exec": [
+							"//var postal_code =[\"2103\",\"PO1 3AX\",\"SW1A 1AA\",\"10001\"];",
+							"//var current_post_code = post_code.shift();",
+							"//pm.environment.set(\"postal_code\",current_post_code);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?postal_code=2103&country=AU&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "postal_code",
+							"value": "2103"
+						},
+						{
+							"key": "country",
+							"value": "AU"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather space and chars in Post code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b82b323-2667-49de-9a19-da80be5ea625",
+						"exec": [
+							"//var postal_code=pm.environment.set(\"postal_code\");",
+							"",
+							"json_response = JSON.parse(responseBody)",
+							"x = json_response.data[0].city_name;",
+							"//y = json_response.data[0].weather.description;",
+							"pm.expect(x).to.equal(\"Portsmouth\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "453be92e-fd77-4274-9b65-908e3b6b4eb9",
+						"exec": [
+							"//var postal_code =[\"2103\",\"PO1 3AX\",\"SW1A 1AA\",\"10001\"];",
+							"//pm.environment.set(\"postal_code\",current_post_code);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?postal_code=PO1%203AX&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "postal_code",
+							"value": "PO1%203AX"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather Post code with dash digits",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b82b323-2667-49de-9a19-da80be5ea625",
+						"exec": [
+							"//var postal_code=pm.environment.set(\"postal_code\");",
+							"",
+							"json_response = JSON.parse(responseBody)",
+							"x = json_response.data[0].city_name;",
+							"//y = json_response.data[0].weather.description;",
+							"pm.expect(x).to.equal(\"San Francisco\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "453be92e-fd77-4274-9b65-908e3b6b4eb9",
+						"exec": [
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?postal_code=94127-2710&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "postal_code",
+							"value": "94127-2710"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather Post code invalid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b82b323-2667-49de-9a19-da80be5ea625",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "453be92e-fd77-4274-9b65-908e3b6b4eb9",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.weatherbit.io/v2.0/current?postal_code=0&country=AU&key=3b1759652ea447e68909fbbb09262b09",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "postal_code",
+							"value": "0"
+						},
+						{
+							"key": "country",
+							"value": "AU"
+						},
+						{
+							"key": "key",
+							"value": "3b1759652ea447e68909fbbb09262b09"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "72e2864c-8abd-4dd1-8c08-621ab13dc852",
+			"key": "url",
+			"value": "https://api.weatherbit.io/v2.0",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
